@@ -44,8 +44,12 @@
     display: none;
     position: absolute;
     z-index: 10;
-    top: 20%;
-    left: 30%;
+    top: 10%;
+    left: 10%;
+    width: 300px;
+  }
+  .meme.block{
+    display: block;
   }
   </Style>
 </head>
@@ -61,14 +65,11 @@
     const name = document.querySelector('.name')
     const meme = document.querySelector('.meme')
 
-    name.addEventListener('mouseover', (event) => {
-      meme.style.display = 'block'
+    name.addEventListener('click', (event) => {
+      meme.classList.toggle('block')
       console.log('Luis has found an error and has reported it successfully. XD')
     });
 
-    name.addEventListener('mouseleave', (event) => {
-      meme.style.display = 'none'
-    });
     // helper functions
     const PI2 = Math.PI * 2
     const random = (min, max) => Math.random() * (max - min + 1) + min | 0
